@@ -646,34 +646,6 @@ body {
                 padding: 40px 20px 10px 20px;
             }
             
-            #socialmedia {
-              padding: 15px 0px 0px 0px;
-              text-align: center;
-              font-size: 38px;
-              color: @blue;
-              vertical-align: top;
-              text-decoration: none;
-              transition: color 0.5s;
-              
-              #facebook {
-                margin-right: 15px; 
-                &:hover {
-                  text-decoration: none;
-                } 
-              }
-              
-              .fa {
-               &:hover {
-                  transition: 0.9s;
-                  transform: rotateY(360deg);
-                  transition-duration: 4s;
-                  color: lighten(@blue, 10%);
-                  text-decoration: none;
-                } 
-              }
-                
-            }
-          
             .btn {
                 display: block;
                 color: white;
@@ -765,9 +737,51 @@ body {
         font-weight: 300;
         padding-top: 10px;
         padding-bottom: 15px;
+        position: relative;
+        bottom: 0;
 
         @media (max-width: 320px) {
             font-size: 14px;
+        }
+      
+        #socialmedia {
+          padding: 7px 50px 0px 0px;
+          text-align: center;
+          font-size: 30px;
+          color: @blue;
+          vertical-align: top;
+          text-decoration: none;
+          transition: color 0.5s;
+          position: absolute;
+          top: 0;
+          right: 0;
+          
+          @media (max-width: 700px) {
+            position: relative;
+            font-size: 20px;
+            padding: 8px 0px;
+            
+          }
+
+
+          #facebook {
+            padding-top: 0;
+            margin-right: 15px; 
+            &:hover {
+              text-decoration: none;
+            } 
+          }
+
+          .fa {
+
+            &:hover {
+              transition: 0.9s;
+              transform: rotateY(360deg);
+              transition-duration: 4s;
+              color: lighten(@blue, 10%);
+              text-decoration: none;
+            } 
+          }
         }
 
         .glyphicon {
